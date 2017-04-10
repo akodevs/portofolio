@@ -1,1 +1,1 @@
-# Meah Stack
+# Mean Stack
