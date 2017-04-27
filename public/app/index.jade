@@ -1,0 +1,21 @@
+doctype html
+html(lang="en", class="no-js", ng-app='app')
+  head
+    meta(charset="utf-8") 
+    title Sample 
+    link(href="/assets/img/identity/favicon.ico", rel="shortcut icon", type="image/x-icon")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Meshup Studio')
+    meta(name='author', content='Meshup Studio - info@meshupstudio.com') 
+    base(href="/")
+
+    //- Mobile Metas  
+    meta(name='viewport', content='width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no')   
+
+    //-include layouts/styles 
+    //-script(type="text/javascript", src="/assets/libraries/modernizr.js") 
+
+  body 
+    div(ui-view="")  
+    include layouts/scripts 
