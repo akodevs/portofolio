@@ -1,2 +1,10 @@
 ﻿.text-center
   | Successfully loaded
+
+form.form(name="form", ng-submit="sendEmail(form)") 
+    hr   
+    h4 Just send it
+    div
+        button.btn.btn-inverse.btn-lg.btn-login(type='submit')
+            | Submit EMAIL
+    br

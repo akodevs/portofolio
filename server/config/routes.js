@@ -4,6 +4,7 @@ module.exports = function(app) {
  
  	// Declare routes here 
   	app.use('/api/bears', require('../api/bears'));  
+  	app.use('/api/email', require('../api/email')); 
  
 	app.get('/api/*', function(req, res) {
 		res.render('404');
