@@ -1,10 +1,484 @@
-﻿.text-center
-  | Successfully loaded
+﻿header#header.header-floating(sticky, ng-attr-data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickySetTop': '60px', 'stickyChangeLogo': false}")
+		.header-body
+			.header-container.container
+				.header-row
+					.header-column
+						.header-row
+							.header-nav.pt-xs
+								button.btn.header-btn-collapse-nav(data-toggle='collapse', data-target='.header-nav-main')
+									i.fa.fa-bars
+								.header-nav-main.collapse
+									nav.wrapper-spy
+										ul#mainNav.nav
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#about-me')
+													i.icon-home.icons
+													span.custom-tooltip About Me
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#experience')
+													i.icon-eye.icons
+													span.custom-tooltip Experience
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#education')
+													i.icon-briefcase.icons
+													span.custom-tooltip Education
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#skills')
+													i.icon-graduation.icons
+													span.custom-tooltip Skills
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#recommendations')
+													i.icon-pencil.icons
+													span.custom-tooltip Recommendations 
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#portfolio')
+													i.icon-diamond.icons
+													span.custom-tooltip Portfolio
+											li
+												a.text-color-dark.background-color-primary(data-hash='', href='#say-hello')
+													i.icon-envelope-open.icons
+													span.custom-tooltip Say Hello
+.main(role='main')
+		section#about-me.section.section-no-border.section-parallax.custom-section-padding-1.custom-position-1.custom-xs-bg-size-cover.m-none(parallax, ng-attr-data-plugin-options="{'speed':2 }", ng-attr-data-image-src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/yosemite.jpg') 
+			.container.appear-animation(animate, ng-attr-data-appear-animation="fadeIn" ng-attr-data-appear-animation-delay="40")
+				.row
+					.col-md-4.col-sm-4.col-xs-10.col-sm-offset-0.col-xs-offset-1.custom-sm-margin-bottom-1
+						img.img-responsive.custom-border.custom-image-position-2.custom-box-shadow-4(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/kurt_718x982.jpg', alt='')
+					.col-md-5.col-sm-8
+						h1.text-color-primary.custom-font-size-1 Kurt Garcia
+						p.text-color-light.font-weight-normal.custom-font-size-2.custom-margin-bottom-1 Front End Engineer
+						span.custom-about-me-infos
+							span.text-color-secondary.text-uppercase
+								i.icons.icon-location-pin &nbsp;Fresno | San Francisco, California Area
+							span.text-color-secondary.text-uppercase
+								i.icons.icon-cup &nbsp;Front End Engineer at ERI, Inc.
+							span.text-color-secondary.text-uppercase.mb-md 
+								i.icons.icon-graduation &nbsp;Polytechnic University of the Philippines   
+		.custom-about-me-links
+			.container
+				.row
+					.col-md-3.col-md-offset-4.col-sm-4.center.custom-xs-border-bottom.p-none
+						a.text-decoration-none(data-hash='', href='#say-hello')
+							span.custom-nav-button.text-color-dark
+								i.icon-earphones-alt.icons.text-color-primary
+								| 									Contact Information
+					.col-md-2.col-sm-4.center.custom-xs-border-bottom.p-none
+						a.text-decoration-none(data-hash='', href='#say-hello')
+							span.custom-nav-button.custom-divisors.text-color-dark
+								i.icon-envelope-open.icons.text-color-primary
+								| 									Send Message
+					.col-md-3.col-sm-4.center.p-none
+						a.text-decoration-none(href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/Kurt_Garcia_Resume.pdf', download)
+							span.custom-nav-button.text-color-dark
+								i.icon-cloud-download.icons.text-color-primary
+								| 									Download Resume
+		section.section.section-no-border.background-color-light.m-none
+			.container
+				.row
+					.col-md-12 
+						h2.text-color-quaternary.font-weight-extra-bold.text-uppercase.mt-md About Me
+						p.custom-text-color-2
+							| I am visionary innovator with hands on experience in software development using agile methodologies, delivering exceptional enterprise and commercial based app for smartphones, tablet, desktop, and wearable devices. I have expertise in User Experience and User Interface with over 6+ years implementing industry best practice in mobile first design, user research, usability trends, technology and mobile product development trends.  
+						#aboutMeMore.about-me-more 
+							p
+								| These are my passion, skills, and talent that will serve as an asset towards the excellence of an organization. What makes me an invaluable asset is what I have to offer to a client who has strategic problems that pure tools won’t be able to solve. 
 
-form.form(name="form", ng-submit="sendEmail(form)") 
-    hr   
-    h4 Just send it
-    div
-        button.btn.btn-inverse.btn-lg.btn-login(type='submit')
-            | Submit EMAIL
-    br
+							p 
+								|	A review of my qualifications and skills will show that I offer 6+ years of experience in UI/UX and Javascript development and that I am confident that I would be a great asset to any organization.  
+						a#aboutMeMoreBtn.btn.btn-tertiary.text-uppercase.custom-btn-style-1.text-xs View More
+		section#experience.section.section-secondary.section-no-border.m-none
+			.container
+				.row
+					.col-md-12
+						h2.text-color-quaternary.text-uppercase.font-weight-extra-bold Experience
+						section#timeline.timeline.custom-timeline
+							.timeline-body.appear-animation(animate, ng-attr-data-appear-animation="fadeIn" ng-attr-data-appear-animation-delay="0")
+								article.timeline-box.right.custom-box-shadow-2
+									.experience-info.col-md-3.col-sm-5.match-height.background-color-primary
+										span.from.text-color-dark.text-uppercase
+											| From
+											span.font-weight-semibold Sep 2014
+										span.to.text-color-dark.text-uppercase
+											| To
+											span.font-weight-semibold Present 
+										p.text-color-dark Fresno , CA
+										span.company.text-color-dark.font-weight-semibold
+											| ERI, INC.
+											span.company-location.text-color-dark.font-weight-normal.text-uppercase Recycling Industry
+									.experience-description.col-md-9.col-sm-7.match-height.background-color-light
+										h4.text-color-dark.font-weight-semibold Front End Engineer,  Application Developer
+										p.custom-text-color-2
+											| Making all applications predictable and consistent, making progression natural, making constraints purposeful, making Interactivity visible, provide continuous feedback, match the user’s mode of operation, reduce performance load, and assumed nothing on what a user can or cannot do.
+										p.custom-text-color-2
+											| Meticulously evaluate and applied better UI/UX in rebuilding a MVC .NET C# application content management system for 1800Recycling.com a website for managing recycled materials, drop-off locations, and etc. It is the industry leading search engine for recycling drop-off location and solutions. 
+								article.timeline-box.right.custom-box-shadow-2
+									.experience-info.col-md-3.col-sm-5.match-height.background-color-primary
+										span.from.text-color-dark.text-uppercase
+											| From
+											span.font-weight-semibold Jan 2015
+										span.to.text-color-dark.text-uppercase
+											| To
+											span.font-weight-semibold Present
+										p.text-color-dark Fresno, CA
+										span.company.text-color-dark.font-weight-semibold
+											| Meshup Studio 
+											span.company-location.text-color-dark.font-weight-normal.text-uppercase Startup Local Business
+									.experience-description.col-md-9.col-sm-7.match-height.background-color-light
+										h4.text-color-dark.font-weight-semibold Sr. Front End Engineer
+										p.custom-text-color-2
+											| Created mocks to built commercial websites for clients using Sketch Prototyping tool and Adobe tools. Used latest technologies (MEAN Stack) to create a lightweight and fast websites. Created mocks to built commercial websites for clients using Sketch Prototyping tool and Adobe tools. Created mocks to built commercial websites for clients using Sketch Prototyping tool and Adobe tools. Used AWS EC2 and Elastic Beanstalk to create servers and virtual machines to host the web app. Collaborated to create/rebrand of more than 10+ small to average local business in Fresno.   
+								article.timeline-box.right.custom-box-shadow-2
+									.experience-info.col-md-3.col-sm-5.match-height.background-color-primary
+										span.from.text-color-dark.text-uppercase
+											| From
+											span.font-weight-semibold Oct 2013
+										span.to.text-color-dark.text-uppercase
+											| To
+											span.font-weight-semibold Sept 2014
+										p.text-color-dark Fresno, CA
+										span.company.text-color-dark.font-weight-semibold
+											| RHA Inc.
+											span.company-location.text-color-dark.font-weight-normal.text-uppercase Public service provider
+									.experience-description.col-md-9.col-sm-7.match-height.background-color-light
+										h4.text-color-dark.font-weight-semibold .NET UI/UX Engineer
+										p.custom-text-color-2
+											| Developed front end for Navigator Program (A program of Covered California) and purposely optimized for desired User Experience with elegant new User Interface features. Developing a cross platform mobile application that helps on-field staff of San Diego Gas and Electric specifically on Energy Savings Assistance program. Optimized the front end of SMJU’s customer relationship management website with rich User Interface and User Experience. Developed an animated Energy Savings Calculator using Snap SVG. Created graphics and wireframes for Covered California programs such as IPAS, GPAS and CPAS. Used HTML5, CSS3, Javascript, Bootstrap UI framework, Ionic UI framework, Persistence JS, Angular JS, Phonegap, Telerik Kendo UI, Snap SVG, Icenium App Builder,  .NET C#, Visual Studio and other Microsoft tools.
+								article.timeline-box.right.custom-box-shadow-2
+									.experience-info.col-md-3.col-sm-5.match-height.background-color-primary
+										span.from.text-color-dark.text-uppercase
+											| From
+											span.font-weight-semibold Feb 2013
+										span.to.text-color-dark.text-uppercase
+											| To
+											span.font-weight-semibold Oct 2013
+										p.text-color-dark Fresno, CA
+										span.company.text-color-dark.font-weight-semibold
+											| Decipher Inc.
+											span.company-location.text-color-dark.font-weight-normal.text-uppercase Market research company
+									.experience-description.col-md-9.col-sm-7.match-height.background-color-light
+										h4.text-color-dark.font-weight-semibold Front End Engineer / Surver Programmer
+										p.custom-text-color-2
+											| Programming surveys on a daily basis for big clients all over the world (Facebook, LinkedIn etc.). Used HTML5, CSS3, Python, Javascript, Jquery, and our own software tools.  
+								article.timeline-box.right.custom-box-shadow-2
+									.experience-info.col-md-3.col-sm-5.match-height.background-color-primary
+										span.from.text-color-dark.text-uppercase
+											| From
+											span.font-weight-semibold Aug 2011
+										span.to.text-color-dark.text-uppercase
+											| To
+											span.font-weight-semibold Oct 2012
+										p.text-color-dark Irvine, CA
+										span.company.text-color-dark.font-weight-semibold
+											| Scanitek Inc.
+											span.company-location.text-color-dark.font-weight-normal.text-uppercase Market research company
+									.experience-description.col-md-9.col-sm-7.match-height.background-color-light
+										h4.text-color-dark.font-weight-semibold Front End Engineer
+										p.custom-text-color-2
+											| Developed a self-creating profile website. Developed a mobile based website using Jquery Mobile. Developed a website using HTML5, CSS3, MySql database, PHP. Designed website’s architecture and graphics. Developed website’s logo.
+								.timeline-bar
+		section#education.section.section-no-border.custom-background-color-1.m-none
+			.container
+				.row
+					.col-md-12
+						h2.text-color-quaternary.text-uppercase.font-weight-extra-bold.m-none Education & Certifications
+						.owl-carousel.nav-bottom.custom-carousel-style-1.custom-item-padding.custom-dots-style-1(carousel, ng-attr-data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}")
+							div
+								.col-md-6.col-sm-6
+									.custom-box-details-2.background-color-light.custom-box-shadow-3
+										i.icon-graduation.icons.text-color-primary
+										h4.font-weight-semibold.text-color-dark.m-none Polytechnic University of the Philippines
+										p.custom-text-color-2.mb-xs Bachelor of Science in Computer Science
+										strong.text-color-primary 2008-2011
+								.col-md-6.col-sm-6
+									.custom-box-details-2.background-color-light.custom-box-shadow-3
+										i.icon-badge.icons.text-color-primary
+										h4.font-weight-semibold.text-color-dark.m-none UC Berkeley
+										p.custom-text-color-2.mb-xs Software as a Service
+										strong.text-color-primary License #: 0eeae0317d4e4cdfbcc123d3315ed8cc
+							div 
+								.col-md-6.col-sm-6
+									.custom-box-details-2.background-color-light.custom-box-shadow-3
+										i.icon-badge.icons.text-color-primary
+										h4.font-weight-semibold.text-color-dark.m-none  MongoDB University.
+										p.custom-text-color-2.mb-xs  MongoDB for NodeJS Developers
+										strong.text-color-primary License #: 6ffa64ee88d2456cbd3605749c1e8d90 
+		section#skills.section.section-no-border.background-color-light.m-none
+			.container
+				.row.custom-sm-flex-order
+					h2.text-color-quaternary.text-uppercase.font-weight-extra-bold.m-none Skills
+					.col-md-6.col-sm-6.col-xs-12
+						.progress-bars.custom-progress-bars.mt-lg
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span User Experience
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='92%', data-appear-animation-delay='300')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span User Interface
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='92%', data-appear-animation-delay='600') 
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Protoyping Tools
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='80%', data-appear-animation-delay='300')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Adobe Products
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='90%', data-appear-animation-delay='600') 
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span HTML5
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='90%', data-appear-animation-delay='300')  
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span SCSS/LESS
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='90%', data-appear-animation-delay='900')  
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span BEM Methodologies
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='90%', data-appear-animation-delay='900')  
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Amazon Cloud
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='40%', data-appear-animation-delay='900')  
+					.col-md-6.col-sm-6.col-xs-12
+						.progress-bars.custom-progress-bars.mt-lg
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Javascript
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='90%', data-appear-animation-delay='300')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Javascript Patterns
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='70%', data-appear-animation-delay='300')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span OOP
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='78%', data-appear-animation-delay='600')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span MEAN STACK
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='78%', data-appear-animation-delay='900')
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Git/Bit Bucket
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='70%', data-appear-animation-delay='900') 
+							.progress-label.text-color-dark.font-weight-semibold.text-uppercase.text-sm
+								span Objective C
+							.progress
+								.progress-bar(progress-bar, ng-attr-data-appear-progress-animation='40%', data-appear-animation-delay='300') 
+		section#recommendations.section.section-no-border.background-color-primary.m-none
+			.container
+				.row
+					.col-md-12
+						h2.text-color-quaternary.font-weight-extra-bold.text-uppercase Recommendations
+					.col-md-12.p-none
+						.owl-carousel.custom-dots-style-1.custom-dots-color-1.custom-dots-position-1.mb-none(carousel, ng-attr-data-plugin-options="{'items': 1, 'autoHeight': true, 'loop': false, 'nav': false, 'dots': true}")
+							div
+								.col-md-12
+									.testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-none
+										blockquote.pb-sm
+											p.custom-text-color-3
+												| I had the pleasure of working with Kurt on several projects. Collaboration was always fluid between us, going back and forth building off of each other. I trusted his direction on UI completely and for every design challenge I presented him with, I was met with a unique perspective that represented a clean, thoughtful elegance. Kurt has quite the eye and a positive demeanor that will add to any team.
+										.testimonial-author.pull-left
+											p
+												strong.text-uppercase Allen Fuqua
+												span.custom-text-color-3 Analyst | Worked in the same group | RHA Inc.
+							div
+								.col-md-12
+									.testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-none
+										blockquote.pb-sm
+											p.custom-text-color-3
+												| I'm sad to see Kurt leave Decipher. He was great the moment I interviewed him. He is a hard worker and has great understanding of the web. He was a solid Programmer at Decipher and learned very quickly. He took on challenging role in a developing position. I wish him the best in his future endeavors. I'm sure he will do fine where ever he may end up.
+										.testimonial-author.pull-left
+											p
+												strong.text-uppercase Minh Bui
+												span.custom-text-color-3 Director of Software Support | Worked in the same group | Decipher
+							div
+								.col-md-12
+									.testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-none
+										blockquote.pb-sm
+											p.custom-text-color-3
+												| Kurt is an excellent UI designer and programmer. His designs/implementations capture all the project requirements while being creative and functional for the end-user. 
+											p.custom-text-color-3
+												| In my experience with Kurt he was committed to creating the best implementation possible, enthusiastically addressing any problems found by the end user, no matter the complexity or difficulty they presented. He did all this while closely adhering to the schedule and within the man-hours allotted to the task.
+											p.custom-text-color-3
+												| Kurt researched his work thoroughly to come up with the best solution, even if that meant quickly learning new skills and techniques. He put in full effort at each stage of the SDLC, including quick responses to testing feedback, and is committed to delivering as bug-free a product as possible.  
+										.testimonial-author.pull-left
+											p
+												strong.text-uppercase Richard Moore
+												span.custom-text-color-3 Softrware Engineer | Worked in the same group | RHA Inc.			
+							div
+								.col-md-12
+									.testimonial.custom-testimonial-style-1.testimonial-with-quotes.mb-none
+										blockquote.pb-sm
+											p.custom-text-color-3
+												| Kurt is a hard working, detail-oriented user interface designer. He has a lot of potential and is passionate for his work! I enjoyed working with him, he was a great member of the team.
+										.testimonial-author.pull-left
+											p
+												strong.text-uppercase Tatyana Nikolaychuk
+												span.custom-text-color-3 Database Administrator | Worked in the same group | RHA Inc.			
+		section#portfolio.section.section-no-border.background-color-secondary.m-none
+			.container
+				.row
+					.col-md-12
+						h2.text-color-quaternary.font-weight-extra-bold.text-uppercase Portfolio
+						ul.nav.nav-pills.sort-source.custom-nav-sort.mb-xlg(isotope, ng-attr-data-sort-id='portfolio', ng-attr-data-option-key='filter')
+							li.active(data-option-value='*')
+								a(href='#') Show All
+							li(data-option-value='.websites')
+								a(href='#') Websites
+							li(data-option-value='.logos')
+								a(href='#') Logos
+							li(data-option-value='.brands')
+								a(href='#') Brands
+						.row
+							.sort-destination-loader.sort-destination-loader-showing
+								ul.image-gallery.sort-destination.lightbox(ng-attr-data-sort-id='portfolio')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/1.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/1.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/2.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/2.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/IMG_2124.PNG')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/IMG_2124.PNG', alt='') 
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/4.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/4.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/5.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/5.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/IMG_2130.PNG')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/IMG_2130.PNG', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/VeriiSocial-1.jpg')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/VeriiSocial-1.jpg', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.brands
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/bcardfront-01.jpg')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/bcardfront-01.jpg', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/c.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/c.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.logos
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/logo-owl.png.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/logo-owl.png', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/datsko.jpg')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/datsko.jpg', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/mu-final-mok.v1.jpg')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/mu-final-mok.v1.jpg', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/splashpage-1.jpg')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/splashpage-1.jpg', alt='')
+									li.col-md-3.col-sm-6.col-xs-12.isotope-item.logos
+										.image-gallery-item
+											a.lightbox-portfolio(magnific-popup, href='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/verii-social-logo.png')
+												span.thumb-info.custom-thumb-info-1
+													span.thumb-info-wrapper
+														span.thumb-info-plus
+														img.img-responsive(src='https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/verii-social-logo.png', alt='') 
+		#say-hello.container-fluid
+			.row
+				.col-md-6.p-none
+					section.section.section-no-border.match-height.background-color-primary.m-none
+						.row.m-none
+							.col-half-section.col-half-section-right.mr-md
+								h2.text-color-quaternary.text-uppercase.font-weight-extra-bold Let's talk!
+								form#callSendMessage.custom-form-style(name='form', ng-submit="sendEmail(form)")
+									.form-content
+										.form-control-custom
+											input#callName.form-control(type='text', name="name" ng-model="email.name", placeholder='Name')
+										.form-control-custom
+											input#callSubject.form-control(type='text', name="subject" ng-model="email.subject", placeholder='Subject')
+										.form-control-custom
+											textarea#message.form-control(maxlength='5000',  rows='10', name='message', placeholder='Message',  ng-model="email.message")
+										input.btn.btn-quaternary.text-color-light.text-uppercase.font-weight-semibold.outline-none.custom-btn-style-2.custom-border-radius-1(type='submit')
+				.col-md-6.p-none
+					section.section.section-no-border.match-height.m-none(style='background: url(https://s3-us-west-2.amazonaws.com/mu-blob/kurtpricel/yosemite.jpg); background-size: cover;')
+						.row.m-none
+							.col-half-section.col-half-section-left.ml-md
+								a.text-decoration-none(href='mailto:kurt.pricel06@gmail.com')
+									span.feature-box.custom-feature-box.mb-xlg
+										span.custom-feature-box-icon
+											i.icon-envelope.icons.text-color-light
+										span.feature-box-info
+											label.font-weight-semibold.text-uppercase.custom-text-color-1 Email
+											strong.font-weight-light.text-color-light.custom-opacity-effect-1 kurt.pricel06@gmail.com
+								a.text-decoration-none(href='tel:+5598249534')
+									span.feature-box.custom-feature-box.mb-xlg
+										span.custom-feature-box-icon
+											i.icon-phone.icons.text-color-light
+										span.feature-box-info
+											label.font-weight-semibold.text-uppercase.custom-text-color-1 Phone
+											strong.font-weight-light.text-color-light.custom-opacity-effect-1 559-824-9534
+								span.feature-box.custom-feature-box.mb-xlg
+									span.custom-feature-box-icon
+										i.icon-share.icons.text-color-light
+									a.text-decoration-none(href='https://www.linkedin.com/in/kurtpricel')
+										span.feature-box-info
+											label.font-weight-semibold.text-uppercase.custom-text-color-1 Follow me
+											strong.font-weight-light.text-color-light.custom-opacity-effect-1 Linkedin 
+									a.text-decoration-none(href='https://www.behance.net/akodevs')
+										span.feature-box-info 
+											strong.font-weight-light.text-color-light.custom-opacity-effect-1 Behance 
+		footer#footer.m-none.p-none
+			.footer-copyright.background-color-light.m-none
+				.container
+					.row
+						.col-md-12.m-none
+							p.custom-text-color-2 © KurtPricel Copyright 2017. All Rights Reserved.

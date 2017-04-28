@@ -25,30 +25,29 @@ exports.testSend = function(req, res) {
 	    // default message fields
 
 	    // sender info
-	    from: 'KurtG <kurt.pricel06@gmail.com>',
+	    from: 'Your Website <kurt.pricel06@gmail.com>',
 	    headers: {
 	        'X-Laziness-level': 1000 // just an example header, no need to use this
 	    }
 	});
- 
+  
 	console.log('SMTP Configured');
-
+ 
 
 	// Message object
 	var message = {
 
 	    // Comma separated list of recipients
-	    to: 'Meshup <themeshstudio@gmail.com>',
+	    to: 'Kurt Garcis <kurt.pricel06@gmail.com>',
 
 	    // Subject of the message
-	    subject: 'Nodemailer is unicode friendly ✔ #', //
+	    subject: req.body.subject, 
 
 	    // plaintext body
-	    text: 'Hello to myself!',
+	    text: req.body.message,
 
 	    // HTML body
-	    html: '<p><b>Hello</b> to myself <img src="cid:note@example.com"/></p>' +
-	        '<p>Here\'s a nyan cat for you as an embedded attachment:<br/><img src="cid:nyan@example.com"/></p>',
+	    html: req.body.message,
 
 	    // Apple Watch specific HTML body
 	    watchHtml: '<b>Hello</b> to myself' 
