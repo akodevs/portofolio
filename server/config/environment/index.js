@@ -17,7 +17,7 @@ var all = {
 	resetData: true,
 	
 	// Server port
-	port: process.env.PORT || 3000, 
+	port: process.env.PORT || 7000, 
 
 	// List of user roles 
 	userRoles: ['user', 'admin', 'superadmin'],

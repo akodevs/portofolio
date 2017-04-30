@@ -8,7 +8,7 @@ app.directive('magnificPopup', function ($timeout) {
  				if(attr.target == undefined) { 
 		          	$(element).magnificPopup({ 
 		    			type: 'iframe',
-						mainClass: 'my-mfp-zoom-in' 
+						mainClass: 'my-mfp-zoom-in', 
 					});  
 		         } else {
 		         	$(element).click(function() {

@@ -11,21 +11,27 @@ var smtpTransport = require('nodemailer-smtp-transport');
 exports.testSend = function(req, res) {    
  
 	// Create a SMTP transporter object
+	var logger = bunyan.createLogger({
+	    name: 'nodemailer'
+	});
+	logger.level('trace');
+
 	var transporter = nodemailer.createTransport({
 	    service: 'Gmail',
 	    auth: {
-	       user: "kurt.pricel06@gmail.com",
-	       pass: "@Kod3vS1992" 
-	    },
-	    logger: bunyan.createLogger({
-	        name: 'nodemailer'
-	    }),
+	        type: 'OAuth2', 
+     	    user: 'kurt.pricel06@gmail.com',
+	        clientId: '473046905698-d2m4jt0okt652uu8j7u2ieucfdqf55mb.apps.googleusercontent.com',
+	        clientSecret: 'TeK_CBWzxMZYK9FbfydIlzHq',
+	        refreshToken: '1/M5yyE-ABuqr9DxRPgnUBXc5U3IMPsUX1KYU-PJw6KII' 
+	    }, 
+	    logger,
 	    debug: true // include SMTP traffic in the logs
 	}, {
 	    // default message fields
 
 	    // sender info
-	    from: 'Your Website <kurt.pricel06@gmail.com>',
+	    from: 'Kurt Garcia <kurt.pricel06@gmail.com>',
 	    headers: {
 	        'X-Laziness-level': 1000 // just an example header, no need to use this
 	    }
@@ -38,10 +44,10 @@ exports.testSend = function(req, res) {
 	var message = {
 
 	    // Comma separated list of recipients
-	    to: 'Kurt Garcis <kurt.pricel06@gmail.com>',
+	    to: 'Kurt Garcia <kurt.pricel06@gmail.com>',
 
 	    // Subject of the message
-	    subject: req.body.subject, 
+	    subject: req.body.name + " | " +req.body.subject, 
 
 	    // plaintext body
 	    text: req.body.message,

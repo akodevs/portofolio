@@ -438,7 +438,11 @@
 					section.section.section-no-border.match-height.background-color-primary.m-none
 						.row.m-none
 							.col-half-section.col-half-section-right.mr-md
-								h2.text-color-quaternary.text-uppercase.font-weight-extra-bold Let's talk!
+								h2.text-color-quaternary.text-uppercase.font-weight-extra-bold Let's talk! 
+								.alert.alert-dismissable.fade.in(ng-class="formAlert.class", ng-show="formAlert.status == true")
+									a.close(href='#', data-dismiss='alert', aria-label='close') ×
+									strong {{ formAlert.state }}!
+									|  {{ formAlert.message }}.
 								form#callSendMessage.custom-form-style(name='form', ng-submit="sendEmail(form)")
 									.form-content
 										.form-control-custom

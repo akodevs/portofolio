@@ -1,0 +1,12 @@
+---
+version: '2' 
+
+services:
+    devkurt:
+        build: .
+        expose:
+          - "8080"  
+    proxy:
+      build: proxy
+      ports:
+       - "80:80"
